@@ -57,7 +57,7 @@ function isEmail (str) {
 
 function countIf (array, fn) {
   let count = 0
-  for (let item of array) {
+  for (const item of array) {
     if (fn(item)) count++
   }
   return count
@@ -65,7 +65,7 @@ function countIf (array, fn) {
 
 function filter (array, fn) {
   const result = []
-  for (let item of array) {
+  for (const item of array) {
     if (fn(item)) result.push(item)
   }
   return result
@@ -73,7 +73,7 @@ function filter (array, fn) {
 
 function map (array, fn) {
   const result = []
-  for (let item of array) {
+  for (const item of array) {
     result.push(fn(item))
   }
   return result
@@ -86,4 +86,3 @@ function filterStringsWithCommas (str) {
 function splitStringByCommas (str) {
   return str.split(',')
 }
-
