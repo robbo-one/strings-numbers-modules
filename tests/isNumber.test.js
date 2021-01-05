@@ -12,3 +12,15 @@ test('13 is a number', () => {
   expect(actual).toBe(expected)
 })
 
+test('hi is not a number', () => {
+  const expected = false
+  const actual = isNumber('hi')
+  expect(actual).toBe(expected)
+})
+
+test('{} is not a number', () => {
+  const expected = false
+  const actual = isNumber({})
+  expect(actual).toBe(expected)
+})
+
