@@ -10,7 +10,8 @@ module.exports = {
   countIf : countIf,
   filter : filter,
   map : map,
-  filterStringsWithCommas : filterStringsWithCommas
+  filterStringsWithCommas : filterStringsWithCommas,
+  splitStringByCommas : splitStringByCommas
 }
 
 
@@ -99,11 +100,10 @@ function map (array, fn) {
 }
 
 function filterStringsWithCommas (str) {
-console.log(str)
-
+  return str.includes(",")
 }
 
 function splitStringByCommas (str) {
-
+ return str.split(",")
 }
 
