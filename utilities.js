@@ -105,7 +105,7 @@ function map (array, fn) {
   for (let i = 0; i < array.length; i++) {
     newArr.push(fn(array[i]))
   }
-  console.log(newArr)
+  //console.log(newArr)
   return newArr
 }
 
@@ -119,6 +119,6 @@ function filterStringsWithCommas (str) {
 }
 
 function splitStringByCommas (str) {
-  
+  return str.split(",")
 }
 
