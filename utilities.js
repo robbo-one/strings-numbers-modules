@@ -93,14 +93,32 @@ function countIf (array, fn) {
 }
 
 function filter (array, fn) {
+  let newArr = []
+  for (let i = 0; i < array.length; i++) {
+    if (fn(array[i])) {newArr.push(array[i])}
+  }
+  return newArr
 }
 
 function map (array, fn) {
+  let newArr = []
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(fn(array[i]))
+  }
+  console.log(newArr)
+  return newArr
 }
 
 function filterStringsWithCommas (str) {
+  let arr = str.split("")
+  let count = 0
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === ',') { count ++ }
+  }
+  return count
 }
 
 function splitStringByCommas (str) {
+  
 }
 
