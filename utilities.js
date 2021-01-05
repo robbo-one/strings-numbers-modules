@@ -1,13 +1,34 @@
-function getType (thing) {
-}
+module.exports = {
+    getType: getType,
+    isNumber: isNumber,
+    toNumber : toNumber,
+    isStringNumber: isStringNumber
+  }
+
+
+  function getType (thing) {
+    return typeof thing
+  }
 
 function isNumber (thing) {
+    if (typeof thing !== "number") {
+        return false;
+    } else if (typeof thing === "number") {
+        return true;
+    }    
 }
 
 function toNumber (str) {
+    return Number (str);
 }
 
 function isStringNumber (str) {
+    if (isNaN(str) === false) {
+        return true;
+    } else if (isNaN(str) === true) {
+        return false;
+    }
+    
 }
 
 function add (a, b) {
