@@ -42,16 +42,35 @@ function isStringNumber (str) {
 }
 
 function add (a, b) {
-  
+  // if(typeof a === String || typeof b === String) {
+  //   return addStrings(a, b)
+  // }
+  return a + b
 }
 
 function addStrings (a, b) {
+  // console.log(typeof a, typeof b)
+  // console.log(Number(a))
+  // let sum = (Number(a) + Number(b))
+  // console.log(sum)
+  return (Number(a) + Number(b)).toString()
 }
 
 function addStringsOrNumbers (a, b) {
+  // console.log(a,b)
+  // console.log(typeof a, typeof b)
+  // if(typeof a === "string" && typeof b === "string") {
+  //   return addStrings(a, b)
+  // } else
+  if (typeof a === "string" || typeof b === "string"){
+  return addStrings(a, b)
+  } else {
+    return add(a, b)
+  }
 }
 
 function isEmail (str) {
+  
 }
 
 function countIf (array, fn) {
