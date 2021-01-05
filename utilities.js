@@ -34,7 +34,7 @@ function toNumber (str) {
 }
 
 function isStringNumber (str) {
-  console.log(str)
+  //console.log(str)
   if(isNaN(Number(str))) {
     return false
   }
@@ -70,16 +70,19 @@ function addStringsOrNumbers (a, b) {
 }
 
 function isEmail (str) {
-  let hasAt = false
-  let hasDot = false
-  let arr = str.split("")
-  for(let i = 0; i < arr.length; i++) {
-    if(arr[i] === "@") {hasAt = true}
-    if(arr[i] === "."){hasDot = true}
-    }
-  if(hasDot && hasAt) {return true }
-  else { return false}
+  // let hasAt = false
+  // let hasDot = false
+  // let arr = str.split("")
+  // for(let i = 0; i < arr.length; i++) {
+  //   if(arr[i] === "@") {hasAt = true}
+  //   if(arr[i] === "."){hasDot = true}
+  //   }
+  // if(hasDot && hasAt) {return true }
+  // else { return false}
   //console.log(arr)
+  const atPosition = str.indexOf("@")
+  const dotPosition = str.lastIndexOf(".")
+  return atPosition > 0 && atPosition < dotPosition 
 }
 
 function countIf (array, fn) {
