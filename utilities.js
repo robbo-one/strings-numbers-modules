@@ -6,7 +6,9 @@ module.exports = {
   isStringNumber:isStringNumber,
   add: add,
   addStrings: addStrings,
-  addStringsOrNumbers: addStringsOrNumbers
+  addStringsOrNumbers: addStringsOrNumbers,
+  isEmail: isEmail,
+  countIf :countIf 
 }
 
 function getType (thing) {
@@ -73,16 +75,28 @@ function addStringsOrNumbers (a, b) {
 
 function isEmail (str) {
 
-
-  
-
+  var re = /\S+@\S+\.\S+/;
+  return re.test(str);  
 
 }
 
 function countIf (array, fn) {
+
+  let count = 0;
+const answer = array.map(val => {
+if (fn(val)){
+  count ++
+} 
+
+})
+
+return count
 }
 
 function filter (array, fn) {
+
+console.log(array)
+
 }
 
 function map (array, fn) {
