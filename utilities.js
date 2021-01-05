@@ -70,10 +70,26 @@ function addStringsOrNumbers (a, b) {
 }
 
 function isEmail (str) {
-  
+  let hasAt = false
+  let hasDot = false
+  let arr = str.split("")
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === "@") {hasAt = true}
+    if(arr[i] === "."){hasDot = true}
+    }
+  if(hasDot && hasAt) {return true }
+  else { return false}
+  //console.log(arr)
 }
 
 function countIf (array, fn) {
+  let count = 0
+  for(let i =0;i < array.length; i++) {
+    if(fn(array[i])) {
+      count++
+    }
+  }
+  return count
 }
 
 function filter (array, fn) {
