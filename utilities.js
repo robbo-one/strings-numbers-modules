@@ -30,12 +30,19 @@ function isNumber (thing) {
 }
 
 function toNumber (str) {
+  return Number(str)
 }
 
 function isStringNumber (str) {
+  console.log(str)
+  if(isNaN(Number(str))) {
+    return false
+  }
+  return true
 }
 
 function add (a, b) {
+  
 }
 
 function addStrings (a, b) {
