@@ -59,9 +59,24 @@ return answer.toString()
 }
 
 function addStringsOrNumbers (a, b) {
+
+  if (typeof(a) === "number" && typeof(b) === "number") {
+   
+    return a + b
+  } 
+
+  let answer =  Number(a) + Number(b)
+
+  return answer.toString()
+  
 }
 
 function isEmail (str) {
+
+
+  
+
+
 }
 
 function countIf (array, fn) {
